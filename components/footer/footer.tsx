@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createBottomTabNavigator, BottomTabNavigationOptions} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import Booking from '../screen/booking_screen';
 import Home from '../screen/home_screen';
@@ -16,10 +16,22 @@ import MyIcon from '../screen/screen_icons/my_screen_icon ';
 const Tab = createBottomTabNavigator();
 
 function Footer() {
+  const options: BottomTabNavigationOptions = {
+    tabBarActiveTintColor: '#1abfda',
+    tabBarInactiveTintColor: 'gray',
+    headerStyle: {
+      backgroundColor: '#120f3b',
+    },
+    headerTitleAlign: 'center',
+    headerTitleStyle: {
+      color: 'white',
+    },
+  };
+
   return (
     <View style={style.container}>
       <NavigationContainer>
-        <Tab.Navigator>
+        <Tab.Navigator screenOptions={options}>
           <Tab.Screen
             name="Home"
             component={Home}

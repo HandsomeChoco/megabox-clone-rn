@@ -9,15 +9,25 @@
  */
 
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import Footer from './components/footer/footer';
 
 const App = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={style.theme}>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor={style.theme.backgroundColor}
+      />
       <Footer />
     </SafeAreaView>
   );
 };
+
+const style = StyleSheet.create({
+  theme: {
+    backgroundColor: '#120f3b',
+  },
+});
 
 export default App;

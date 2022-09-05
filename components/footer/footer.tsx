@@ -12,6 +12,7 @@ import BookingIcon from '../screen/screen_icons/booking_screen_icon';
 import StoreIcon from '../screen/screen_icons/store_screen_icon';
 import MobileOrderIcon from '../screen/screen_icons/mobile_order_screen_icon';
 import MyIcon from '../screen/screen_icons/my_screen_icon ';
+import Header from '../header/header';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,6 +20,7 @@ function Footer() {
   const options: BottomTabNavigationOptions = {
     tabBarActiveTintColor: '#1abfda',
     tabBarInactiveTintColor: 'gray',
+    headerTitle: Header,
     headerStyle: {
       backgroundColor: '#120f3b',
     },

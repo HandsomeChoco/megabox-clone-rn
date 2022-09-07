@@ -8,23 +8,33 @@
  * @format
  */
 
-import React from 'react';
+import React, {Fragment} from 'react';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import Footer from './components/footer/footer';
 
 const App = () => {
   return (
-    <SafeAreaView style={style.theme}>
+    <Fragment>
+      <SafeAreaView style={style.top} />
       <StatusBar
         barStyle="light-content"
         backgroundColor={style.theme.backgroundColor}
       />
-      <Footer />
-    </SafeAreaView>
+      <SafeAreaView style={style.bottom}>
+        <Footer />
+      </SafeAreaView>
+    </Fragment>
   );
 };
 
 const style = StyleSheet.create({
+  top: {
+    backgroundColor: '#120f3b',
+    flex: 0,
+  },
+  bottom: {
+    flex: 1,
+  },
   theme: {
     backgroundColor: '#120f3b',
   },

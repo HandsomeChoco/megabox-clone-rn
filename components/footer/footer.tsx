@@ -17,21 +17,8 @@ import Header from '../header/header';
 const Tab = createBottomTabNavigator();
 
 function Footer() {
-  const options: BottomTabNavigationOptions = {
-    tabBarActiveTintColor: '#1abfda',
-    tabBarInactiveTintColor: 'gray',
-    headerTitle: Header,
-    headerStyle: {
-      backgroundColor: '#120f3b',
-    },
-    headerTitleAlign: 'center',
-    headerTitleStyle: {
-      color: 'white',
-    },
-  };
-
   return (
-    <View style={style.container}>
+    <View style={style.footer}>
       <NavigationContainer>
         <Tab.Navigator screenOptions={options}>
           <Tab.Screen
@@ -66,9 +53,22 @@ function Footer() {
   );
 }
 
+const options: BottomTabNavigationOptions = {
+  tabBarActiveTintColor: '#1abfda',
+  tabBarInactiveTintColor: 'gray',
+  headerTitle: Header,
+  headerStyle: {
+    backgroundColor: '#120f3b',
+  },
+  headerTitleAlign: 'center',
+  headerTitleStyle: {
+    color: 'white',
+  },
+};
+
 const style = StyleSheet.create({
-  container: {
-    height: '100%',
+  footer: {
+    flex: 1,
   },
 });
 export default Footer;

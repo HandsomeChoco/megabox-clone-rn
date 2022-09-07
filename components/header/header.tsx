@@ -5,29 +5,21 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
 function UserMemberShip() {
-  return (
-    <Ionicon name="barcode-sharp" color="#fff" size={20} style={style.box} />
-  );
+  return <Ionicon name="barcode-sharp" color="#fff" size={20} />;
 }
 function BI() {
   return (
-    <View>
-      <VectorImage source={require('../../assets/svgs/brand_identity.svg')} />
-    </View>
+    <VectorImage source={require('../../assets/svgs/brand_identity.svg')} />
   );
 }
 
 function RightSideBar() {
-  return (
-    <View style={style.box}>
-      <Icon name="bars" color="#fff" size={20} />
-    </View>
-  );
+  return <Icon name="bars" color="#fff" size={20} />;
 }
 
 function Header() {
   return (
-    <View style={style.headerContainer}>
+    <View style={style.header}>
       <UserMemberShip />
       <BI />
       <RightSideBar />
@@ -36,13 +28,10 @@ function Header() {
 }
 
 const style = StyleSheet.create({
-  headerContainer: {
-    display: 'flex',
+  header: {
     flexDirection: 'row',
-  },
-  box: {
-    width: 20,
-    height: 20,
+    justifyContent: 'space-between',
+    width: '100%',
   },
 });
 export default Header;
